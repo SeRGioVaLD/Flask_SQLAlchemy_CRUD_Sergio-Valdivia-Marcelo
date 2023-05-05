@@ -1,0 +1,56 @@
+ <!-- 
+    TABLA DINAMICA
+    clase table_head: GENERA LOS ENCABEZADOS DE LA TABLA
+    
+    clase table_row: GENERA LAS FILAS QUE CONTIENEN LOS DATOS
+        DE LOS CONTACTOS 
+
+    LUEGO SE ESTABLE CALSE PARA CADA COLUNMA CORRESPONDIENTE
+        name_col
+        email_col
+        num_col
+        opc_col
+
+    VER CONFIGURACION EN main.css
+-->
+
+<table class="table_contact">
+    
+    <tr class="table_head">
+        <th class="name_col">
+            NOMBRE
+        </th>
+        <th class="email_col">
+            CORREO
+        </th>
+        <th class="num_col">
+            NUMERO
+        </th>
+        <th class="opc_col">
+            OPCIONES
+        </th>
+    </tr>
+
+    {% for contact in contacts %}
+        <tr class="table_row " >
+            <td class="name_col">
+                {{ contact.fullname}}
+            </td>
+            <td class="email_col">
+                {{ contact.email}}
+            </td>
+            <td class="num_col">
+                {{ contact.phone}}
+            </td >
+            <td class="opc_col">
+                <a href="{{ url_for('contacts.update', id=contact.id) }}" 
+                  class="btn btn-dark btn-sm rounded-0">Editar 
+                </a>
+                <a href="{{ url_for('contacts.delete', id=contact.id) }}" 
+                  class="btn btn-danger btn-sm rounded-0">Eliminar
+                </a>
+            </td>
+        </tr>    
+    {% endfor %}
+
+</table>

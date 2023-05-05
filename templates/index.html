@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  Flask SQLAlchemy CRUD | Home 
+{% endblock %}
+
+{% block body %}
+  <!-- FORM -->
+  <!-- LISTA DE CONTACTOS e INGRESO DE CONTAC EN COLUMNAS DIFERENTES -->
+  
+
+  <div class="row">
+    <!-- 
+      REPRESENTACION DE LA PARTE DE INGRESO DE CONTACTOS Y LSITA DE CONTACTOS
+      COMO COLUMNAS DIFERENTES
+    -->
+    <!-- INGRESO DE CONTACTO-->
+    <div class="col">
+      {% include 'partials/_message.html' %}
+  
+        <!-- FORM -->
+      {%  include 'partials/_taskForm.html' %}
+    </div>
+    
+    <!-- 
+      REPRESENTACION DE LA LISTA DE CONTACTOS COMO UNA TABLA DINAMICA
+      ARCHIVO _table.html
+      TAMBIEN SE REALIZARON MODIFICACIONES EN main.css
+    -->
+    <div class="col">
+      {%  include 'partials/_table.html' %}
+    </div>
+  </div>
+
+
+
+
+
+
+{% endblock %}

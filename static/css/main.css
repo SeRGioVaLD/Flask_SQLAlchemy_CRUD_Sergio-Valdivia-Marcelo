@@ -1,0 +1,88 @@
+body {
+  background: #BCE9F9;
+}
+
+.bg-black {
+  background: #090909 !important;
+}
+
+
+
+
+/* 
+ALINEA EQUITATIVAMENTE LAS DOS COLUNMAS GENERADAS EN EL html
+*/
+.left{ 
+  float: left;
+  width: 50%; 
+}
+
+.right{ 
+  float: right;
+  width: 50%;
+}
+
+.alert-info {
+  background-color: #BFBFBF;
+  color: #090909;
+}
+
+
+/* 
+CONFIGURACIONES ESTETICAS PARA LAS COLUNMAS, FILAS Y CELDAS DE LA TABLA
+*/
+.table_contact{
+  column-width: 10;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: #E7E7E7;
+}
+
+.table_head{
+  color:white;
+  border: 2px solid #090909 !important;
+  background-color: #090909;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.table_row:nth-child(odd){
+  background-color: #BFBFBF !important;
+  border: 2px solid #090909;
+  border-collapse: collapse; 
+  text-align: left;
+}
+
+.name_col{
+  max-width: 300px;
+  min-width: 300px;;
+}
+
+.email_col{
+  max-width: 200px;
+  min-width: 200px;
+  
+}
+
+.num_col{
+  max-width: 130px;
+  min-width: 130px;
+  
+}
+
+.opc_col{
+  max-width: 130px;
+  min-width: 130px;
+  
+}
+
+th{
+  border: 2px solid #BCE9F9;
+}
+
+td{
+  border: 2px solid #BCE9F9;
+}
+
+
+
